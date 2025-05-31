@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitFynder</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitFynder</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to GitFynder</h1>
-    <p>Your one-stop solution for finding GitHub Users.</p>
-    <input type="text" id="username" placeholder="Enter GitHub username">
-    <button id="searchBtn">Search</button>
-    <div class="userinfo" id="userInfo" style="display: none;"></div>
+  <h1>Welcome to GitFynder</h1>
+  <p>Your one-stop solution for finding GitHub Users.</p>
+
+  <form id="searchForm" aria-label="GitHub User Search">
+    <label for="username" class="visually-hidden">GitHub Username</label>
+    <input
+      type="text"
+      id="username"
+      placeholder="Enter GitHub username"
+      aria-required="true"
+      aria-label="GitHub username"
+    />
+    <button type="submit" id="searchBtn">Search</button>
+  </form>
+
+  <div id="errorMsg" class="error hidden" role="alert"></div>
+  <div class="userinfo hidden" id="userInfo" aria-live="polite"></div>
 </body>
-<script src="./script.js"></script>
 </html>
