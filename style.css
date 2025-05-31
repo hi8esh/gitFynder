@@ -198,9 +198,18 @@ button:focus {
   input[type="text"],
   button {
     width: 100%;
+    margin: 5px 0;
   }
-  
-
+  form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 250px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
   .userinfo {
     padding: 12px;
     max-width: 95%;
